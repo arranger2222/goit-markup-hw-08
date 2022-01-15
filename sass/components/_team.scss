@@ -1,0 +1,85 @@
+.team {
+  background-color: #f5f4fa;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 270px;
+    background-color: #fff;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+  }
+
+  &__position {
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0px;
+    letter-spacing: 0.03em;
+  }
+
+  &__meta {
+    text-align: center;
+    padding: 30px 32px;
+  }
+}
+.social {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #afb1b8;
+    transition: background-color $main-transition;
+  }
+
+  &__icon {
+    fill: currentColor;
+    transition: fill $main-transition;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $secondary-color;
+  }
+
+  &__link:hover .social__icon,
+  &__link:focus .social__icon {
+    fill: #fff;
+  }
+}

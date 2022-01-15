@@ -1,0 +1,38 @@
+.header-contacts {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $secondary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 1.14em;
+    position: relative;
+    padding: 32px 0;
+    transition: color $main-transition;
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 30px;
+  }
+
+  &__icon {
+    fill: $secondary-text-color;
+    margin-right: 10px;
+    transition: $main-transition;
+  }
+
+  &__link:hover svg,
+  & a:focus svg {
+    fill: $secondary-color;
+  }
+
+  & a:hover,
+  & a:focus {
+    color: $secondary-color;
+  }
+}

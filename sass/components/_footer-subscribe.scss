@@ -1,0 +1,69 @@
+.subscribe {
+  display: flex;
+  margin-left: auto;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  &__label {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    height: 50px;
+    width: 358px;
+    background-color: inherit;
+    padding: 15px 16px;
+    color: #fff;
+    transition: border $main-transition;
+    outline: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  }
+
+  &__input:focus,
+  &__input:hover {
+    border: 1px solid $secondary-color;
+  }
+
+  &__input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+  }
+
+  &__button {
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: $secondary-color;
+    margin-left: 12px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    transition: background-color $main-transition;
+    padding: 0 29px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &__button:hover {
+    background-color: #188ce8;
+  }
+}

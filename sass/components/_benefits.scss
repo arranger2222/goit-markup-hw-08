@@ -1,0 +1,30 @@
+.benefits {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 270px;
+  }
+
+  &__icon-frame {
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-color: #f5f4fa;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+}
