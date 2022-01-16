@@ -1,61 +1,104 @@
 .hero {
+  padding: 118px 0;
+  margin-left: auto;
+  margin-right: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #2f303a;
-  background-image: url("../images/mobile/hero/hero_overlay-mb.jpg"),
-    linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/mobile/hero/hero_overlay-mb.jpg");
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url("../images/mobile/hero/hero_overlay-mb@2x.jpg"),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/mobile/hero/hero_overlay-mb@2x.jpg");
   }
 
   @media (min-device-pixel-ratio: 3),
     (min-resolution: 288dpi),
     (min-resolution: 3dppx) {
-    background-image: url("../images/mobile/hero/hero_overlay-mb@3x.jpg"),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/mobile/hero/hero_overlay-mb@3x.jpg");
   }
 
   @include respond-to(tablet) {
-    background-image: url("../images/tablet/hero/hero_overlay-tb.jpg"),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/tablet/hero/hero_overlay-tb.jpg");
   }
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url("../images/tablet/hero/hero_overlay-tb@2x.jpg"),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/tablet/hero/hero_overlay-tb@2x.jpg");
   }
 
   @media (min-device-pixel-ratio: 3),
     (min-resolution: 288dpi),
     (min-resolution: 3dppx) {
-    background-image: url("../images/tablet/hero/hero_overlay-tb@3x.jpg"),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/tablet/hero/hero_overlay-tb@3x.jpg");
   }
 
   @include respond-to(desktop) {
-    background-image: url("../images/desktop/hero/hero_overlay-ds.jpg"),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    max-width: 1600px;
+    padding: 200px 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/desktop/hero/hero_overlay-ds.jpg");
   }
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url("../images/desktop/hero/hero_overlay-ds@2x.jpg"),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/desktop/hero/hero_overlay-ds@2x.jpg");
   }
 
   @media (min-device-pixel-ratio: 3),
     (min-resolution: 288dpi),
     (min-resolution: 3dppx) {
-    background-image: url("../images/desktop/hero/hero_overlay-ds@3x.jpg"),
-      linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/desktop/hero/hero_overlay-ds@3x.jpg");
   }
 
   &__overlay {
@@ -63,6 +106,7 @@
     flex-direction: column;
     justify-content: center;
   }
+
   &__title {
     color: #fff;
     font-size: 26px;
@@ -72,6 +116,11 @@
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 30px;
+
+    @include respond-to(desktop) {
+      font-size: 44px;
+      line-height: 1.44;
+    }
   }
 
   &__button {
