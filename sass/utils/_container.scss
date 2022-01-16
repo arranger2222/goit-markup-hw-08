@@ -1,7 +1,13 @@
 .container {
-  width: 1200px;
-  height: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
+
+  @include respond-to(tablet) {
+    width: 768px;
+  }
+
+  @include respond-to(desktop) {
+    width: 1200px;
+  }
 }

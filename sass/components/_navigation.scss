@@ -1,7 +1,23 @@
-.nav-menu {
+.nav {
+  width: 100%;
   display: flex;
-  align-items: center;
-  margin-left: 93px;
+  justify-content: space-between;
+}
+
+.nav-menu {
+  display: none;
+
+  @include respond-to(tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include respond-to(desktop) {
+    display: flex;
+    align-items: center;
+    margin-left: 93px;
+  }
 
   &__item:not(:last-child) {
     margin-right: 50px;

@@ -1,0 +1,30 @@
+.burger__button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 0px 0px;
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+  & .icon-cross {
+    display: none;
+  }
+  &.is-opened .icon-cross {
+    display: block;
+  }
+  &.is-opened .icon-menu {
+    display: none;
+  }
+  &:hover .icon-menu {
+    fill: $secondary-color;
+  }
+  &:hover .icon-cross {
+    fill: $secondary-color;
+  }
+}
+.icon-cross,
+.icon-menu {
+  fill: $primary-text-color;
+  transition: $main-transition;
+}

@@ -1,5 +1,7 @@
 // ==================== ГЛОБАЛЬНЫЕ СТИЛИ ========================
 @import "./utils/variables";
+@import "./utils/breakpoints";
+@import "./utils/mixins/respond";
 @import "./utils/reset";
 @import "./utils/container";
 @import "./utils/hidden";
@@ -10,6 +12,7 @@
 @import "./components/logo";
 @import "./components/navigation";
 @import "./components/header-contacts";
+@import "./components/burger-menu";
 @import "./components/hero";
 @import "./components/benefits";
 @import "./components/activity";

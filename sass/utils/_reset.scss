@@ -25,6 +25,7 @@ img {
 button {
   cursor: pointer;
   border: none;
+  background: none;
 }
 
 p {
@@ -50,4 +51,6 @@ section {
 
 .header {
   border-bottom: solid 1px #ececec;
+  width: 100%;
+  outline: 1px solid blue;
 }
