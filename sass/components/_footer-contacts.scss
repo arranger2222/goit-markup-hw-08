@@ -1,4 +1,19 @@
 .footer-contacts {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+
+  @include respond-to(tablet) {
+    flex-basis: 50%;
+  }
+
+  @include respond-to(desktop) {
+    align-items: flex-start;
+    flex-basis: auto;
+    margin-bottom: 0;
+  }
   &__link {
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;

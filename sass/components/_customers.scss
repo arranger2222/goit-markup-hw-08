@@ -1,28 +1,67 @@
 .customers {
+  padding: 60px 0;
+  @include respond-to(desktop) {
+    padding: 94px 0;
+  }
   &__title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
     letter-spacing: 0.03em;
-    line-height: 1.16;
+    line-height: 1.17;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include respond-to(desktop) {
+      font-size: 36px;
+      line-height: 1.16;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // outline: 1px solid chartreuse;
+    min-width: 260px;
+    margin: -15px -15px 0 -15px;
+    @include respond-to(desktop) {
+      flex-wrap: nowrap;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+    @include respond-to(tablet) {
+      flex-basis: calc((100% - 6 * 15px) / 3);
+    }
+    @include respond-to(desktop) {
+      flex-basis: calc((100% - 150px) / 6);
+      margin: 0;
+    }
+  }
+
+  &__item:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+
+  &__item:nth-last-child(-n + 3) {
+    @include respond-to(tablet) {
+      margin-bottom: 0px;
+    }
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
     height: 92px;
     border: 1px solid #afb1b8;
     border-radius: 4px;
     color: #afb1b8;
     transition: border-color $main-transition;
-  }
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
   }
 
   &__link:hover,

@@ -4,6 +4,16 @@
 
   &__container {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include respond-to(tablet) {
+      // justify-content: flex-start;
+      align-items: baseline;
+    }
+
+    @include respond-to(desktop) {
+      flex-wrap: nowrap;
+    }
   }
 }

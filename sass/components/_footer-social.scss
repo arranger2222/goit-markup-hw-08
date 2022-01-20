@@ -1,11 +1,21 @@
 .footer-social {
-  margin-left: 70px;
+  margin-bottom: 60px;
+  @include respond-to(tablet) {
+    margin: 0 auto;
+  }
+  @include respond-to(desktop) {
+    margin-left: 70px;
+
+    flex-basis: auto;
+  }
 
   &__list {
     display: flex;
   }
 
   &__title {
+    flex-basis: 100%;
+    text-align: center;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -14,6 +24,9 @@
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 20px;
+    @include respond-to(desktop) {
+      text-align: left;
+    }
   }
 
   &__icon {

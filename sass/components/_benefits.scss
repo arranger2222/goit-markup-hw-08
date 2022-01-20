@@ -1,38 +1,46 @@
 .benefits {
   padding: 60px 0px;
+  @include respond-to(desktop) {
+    padding: 94px 0;
+  }
 
   &__list {
-    width: 100%;
     @include respond-to(tablet) {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+      margin: -15px;
 
       @include respond-to(desktop) {
         justify-content: space-between;
-        margin: -15px;
+        margin: 0;
       }
     }
   }
 
   &__item {
+    margin-bottom: 30px;
     @include respond-to(tablet) {
       width: calc((100% - 4 * 15px) / 2);
       margin: 15px;
 
       @include respond-to(desktop) {
-        width: calc((100% - 8 * 15px) / 4);
+        width: 270px;
+        margin: 0;
       }
     }
   }
-
+  &__item:last-child {
+    margin-bottom: 0;
+  }
   &__icon-frame {
     height: 120px;
     border-radius: 4px;
     background-color: #f5f4fa;
-    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
   }
 
   &__label {
@@ -43,5 +51,8 @@
     line-height: 1.14;
     text-transform: uppercase;
     text-align: center;
+    @include respond-to(desktop) {
+      text-align: left;
+    }
   }
 }
