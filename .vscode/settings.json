@@ -19,6 +19,5 @@
     ".vscode/**",
     "Examples/**"
   ],
-  "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.multiRootWorkspaceName": "goit-markup-hw-08"
 }
