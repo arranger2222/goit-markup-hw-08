@@ -13,11 +13,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/mobile/hero/hero_overlay-mb.jpg");
-
-  @include respond-to(desktop) {
-    padding: 200px 0;
-  }
+    url("../images/mobile/hero/hero_mb_480@1x.jpg");
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -27,7 +23,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/mobile/hero/hero_overlay-mb@2x.jpg");
+      url("../images/mobile/hero/hero_mb_480@2x.jpg");
   }
 
   @media (min-device-pixel-ratio: 3),
@@ -38,16 +34,19 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/mobile/hero/hero_overlay-mb@3x.jpg");
+      url("../images/mobile/hero/hero_mb_480@3x.jpg");
   }
 
+  @include respond-to(desktop) {
+    padding: 200px 0;
+  }
   @include respond-to(tablet) {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/tablet/hero/hero_overlay-tb.jpg");
+      url("../images/tablet/hero/hero_tb_768@1x.jpg");
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -58,7 +57,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/tablet/hero/hero_overlay-tb@2x.jpg");
+      url("../images/tablet/hero/hero_tb_768@2x.jpg");
   }
 
   @media (min-device-pixel-ratio: 3),
@@ -69,7 +68,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/tablet/hero/hero_overlay-tb@3x.jpg");
+      url("../images/tablet/hero/hero_tb_768@3x.jpg");
   }
 
   @include respond-to(desktop) {
@@ -81,7 +80,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/desktop/hero/hero_overlay-ds.jpg");
+      url("../images/desktop/hero/hero_ds_1600@1x.jpg");
     background-size: cover;
   }
 
@@ -93,7 +92,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/desktop/hero/hero_overlay-ds@2x.jpg");
+      url("../images/desktop/hero/hero_ds_1600@2x.jpg");
   }
 
   @media (min-device-pixel-ratio: 3),
@@ -104,7 +103,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/desktop/hero/hero_overlay-ds@3x.jpg");
+      url("../images/desktop/hero/hero_ds_1600@3x.jpg");
   }
 
   &__overlay {
