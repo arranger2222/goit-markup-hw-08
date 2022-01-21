@@ -3,6 +3,7 @@
   width: 40px;
   height: 40px;
   padding: 0px 0px;
+  z-index: 50;
 
   @include respond-to(tablet) {
     display: none;

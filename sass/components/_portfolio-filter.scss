@@ -5,10 +5,17 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
   }
 
-  &__item:not(:last-child) {
+  &__item {
     margin-right: 8px;
+    margin-bottom: 15px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
   }
 
   &__button {

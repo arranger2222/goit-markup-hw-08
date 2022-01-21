@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Studio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
@@ -20,35 +21,43 @@
     <header class="header">
         <!-- =================== НАВИГАЦИЯ ============================= -->
         <div class="header__container container">
-            <nav>
+            <nav class="nav">
                 <a href="index.html" class="logo">
                     <span class="logo__web">Web</span>Studio
                 </a>
                 <ul class="nav-menu">
-                    <li class="nav-menu__item"><a href="index.html" class="nav-menu__link">Студия</a>
-                    </li>
+                    <li class="nav-menu__item"><a href="index.html"
+                            class="nav-menu__link">Студия</a></li>
                     <li class="nav-menu__item"><a href="portfolio.html" class="nav-menu__link nav-menu__link--active">Портфолио</a></li>
                     <li class="nav-menu__item"><a href="" class="nav-menu__link">Контакты</a></li>
                 </ul>
+                <ul class="header-contacts">
+                    <li class="header-contacts__item">
+                        <a href="mailto:info@example.com" class="header-contacts__link">
+                            <svg class="header-contacts__icon" width="16px" height="12px">
+                                <use href="images/sprite.svg#icon-envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="header-contacts__item">
+                        <a href="tel:+380991111111" class="header-contacts__link">
+                            <svg class="header-contacts__icon" width="10px" height="16px">
+                                <use href="images/sprite.svg#icon-smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11</a>
+                    </li>
+                </ul>
             </nav>
             <!-- ====================== ПОЧТА И ТЕЛЕФОН ======================== -->
-            <ul class="header-contacts">
-                <li class="header-contacts__item">
-                    <a href="mailto:info@example.com" class="header-contacts__link">
-                        <svg class="header-contacts__icon" width="16px" height="12px">
-                            <use href="images/sprite.svg#icon-envelope"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="header-contacts__item">
-                    <a href="tel:+380991111111" class="header-contacts__link">
-                        <svg class="header-contacts__icon" width="10px" height="16px">
-                            <use href="images/sprite.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11</a>
-                </li>
-            </ul>
+
+            <button class="burger__button" type="button" data-burger-btn>
+                <svg class="burger-icon" width="40px" height="40px" aria-label="переключатель мобильного меню">
+                    <use class="icon-cross" href="images/sprite.svg#burger-cross"></use>
+                    <use class="icon-menu" href="images/sprite.svg#burger-menu"></use>
+                </svg>
+
+        </div>
         </div>
     </header>
     <main>
@@ -72,7 +81,37 @@
         <li class="portfolio-item"> 
             <a href="#" class="example"> 
                 <div class="example__thumb-box">
-                    <img class="example__img" src="./images/techcrack.jpg" alt="site Tech crack">
+                    <picture>
+                        <source media="(min-width: 1200px)" type="image/webp" srcset="
+                                    ./images/desktop/examples/webp/example1_ds_370@1x.webp 1x,
+                                    ./images/desktop/examples/webp/example1_ds_370@2x.webp 2x"/>
+
+                        <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                                    ./images/desktop/examples/example1_ds_370@1x.jpg 1x,
+                                    ./images/desktop/examples/example1_ds_370@2x.jpg 2x"/>
+
+
+
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" srcset="
+                                    ./images/tablet/examples/webp/example1_tb_354@1x.webp 1x,
+                                    ./images/tablet/examples/webp/example1_tb_354@2x.webp 2x"/>
+                        
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/jpg" srcset="
+                                    ./images/tablet/project1_t_354@1x.jpg 1x,
+                                    ./images/tablet/project1_t_354@2x.jpg 2x"/>
+
+                        
+                        
+                        <source media="(max-width: 767px)" type="image/webp" srcset="
+                                    ./images/mobile/examples/webp/example1_mb_450@1x.webp 1x,
+                                    ./images/mobile/examples/webp/example1_mb_450@2x.webp 2x"/>
+                        
+                        <source media="(max-width: 767px)" type="image/jpg" srcset="
+                                    ./images/mobile/examples/example_mb_450@1x.jpg 1x,
+                                    ./images/mobile/examples/example_mb_450@2x.jpg 2x"/>
+
+                        <img class="example__img" src="./images/desktop/examples/example1_ds_370@1x.jpg" alt="Ноутбук" />
+                    </picture>
                     <div class="example__overlay">
                         <p class="example__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют
                             эту платформу для цифрового
@@ -88,7 +127,37 @@
         <li class="portfolio-item">
             <a href="#" class="example">
                 <div class="example__thumb-box">
-                    <img class="example__img" src="./images/neworlean.jpg" alt="poster New Orlean">
+                    <picture>
+                        <source media="(min-width: 1200px)" type="image/webp" srcset="
+                                                        ./images/desktop/examples/webp/example2_ds_370@1x.webp 1x,
+                                                        ./images/desktop/examples/webp/example2_ds_370@2x.webp 2x" />
+                    
+                        <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                                                        ./images/desktop/examples/example2_ds_370@1x.jpg 1x,
+                                                        ./images/desktop/examples/example2_ds_370@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" srcset="
+                                                        ./images/tablet/examples/webp/example2_tb_354@1x.webp 1x,
+                                                        ./images/tablet/examples/webp/example2_tb_354@2x.webp 2x" />
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/jpg" srcset="
+                                                        ./images/tablet/project2_t_354@1x.jpg 1x,
+                                                        ./images/tablet/project2_t_354@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(max-width: 767px)" type="image/webp" srcset="
+                                                        ./images/mobile/examples/webp/example2_mb_450@1x.webp 1x,
+                                                        ./images/mobile/examples/webp/example2_mb_450@2x.webp 2x" />
+                    
+                        <source media="(max-width: 767px)" type="image/jpg" srcset="
+                                                        ./images/mobile/examples/example2_mb_450@1x.jpg 1x,
+                                                        ./images/mobile/examples/example2_mb_450@2x.jpg 2x" />
+                    
+                        <img class="example__img" src="./images/desktop/examples/example2_ds_370@1x.jpg" alt="Постер New Orlean" />
+                    </picture>
                     <div class="example__overlay">
                         <p class="example__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют
                             эту платформу для цифрового
@@ -104,7 +173,37 @@
         <li class="portfolio-item">
             <a href="#" class="example">
                 <div class="example__thumb-box">
-                    <img class="example__img" src="./images/seafood.jpg" alt="restraunt Sea Food">
+                    <picture>
+                        <source media="(min-width: 1200px)" type="image/webp" srcset="
+                                                                            ./images/desktop/examples/webp/example3_ds_370@1x.webp 1x,
+                                                                            ./images/desktop/examples/webp/example3_ds_370@2x.webp 2x" />
+                    
+                        <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                                                                            ./images/desktop/examples/example3_ds_370@1x.jpg 1x,
+                                                                            ./images/desktop/examples/example3_ds_370@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" srcset="
+                                                                            ./images/tablet/examples/webp/example3_tb_354@1x.webp 1x,
+                                                                            ./images/tablet/examples/webp/example3_tb_354@2x.webp 2x" />
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/jpg" srcset="
+                                                                            ./images/tablet/examples/example3_tb_354@1x.jpg 1x,
+                                                                            ./images/tablet/examples/example3_tb_354@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(max-width: 767px)" type="image/webp" srcset="
+                                                                            ./images/mobile/examples/webp/example3_mb_450@1x.webp 1x,
+                                                                            ./images/mobile/examples/webp/example3_mb_450@2x.webp 2x" />
+                    
+                        <source media="(max-width: 767px)" type="image/jpg" srcset="
+                                                                            ./images/mobile/examples/example3_mb_450@1x.jpg 1x,
+                                                                            ./images/mobile/examples/example3_mb_450@2x.jpg 2x" />
+                    
+                        <img class="example__img" src="./images/desktop/examples/example3_ds_370@1x.jpg" alt="Ресторан Sea Food" />
+                    </picture>
                     <div class="example__overlay">
                         <p class="example__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют
                             эту платформу для цифрового
@@ -120,7 +219,43 @@
         <li class="portfolio-item">
             <a href="#" class="example">
                 <div class="example__thumb-box">
-                    <img class="example__img" src="./images/prime.jpg" alt="project Prime">
+                    <picture>
+                        <source media="(min-width: 1200px)" type="image/webp"
+                            srcset="
+                                ./images/desktop/examples/webp/example4_ds_370@1x.webp 1x,
+                                ./images/desktop/examples/webp/example4_ds_370@2x.webp 2x" />
+                    
+                        <source media="(min-width: 1200px)" type="image/jpg"
+                            srcset="
+                                ./images/desktop/examples/example4_ds_370@1x.jpg 1x,
+                                ./images/desktop/examples/example4_ds_370@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/webp"
+                            srcset="
+                                ./images/tablet/examples/webp/example4_tb_354@1x.webp 1x,
+                                ./images/tablet/examples/webp/example4_tb_354@2x.webp 2x" />
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/jpg"
+                            srcset="
+                                ./images/tablet/examples/example4_tb_354@1x.jpg 1x,
+                                ./images/tablet/examples/example4_tb_354@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(max-width: 767px)" type="image/webp"
+                            srcset="
+                                ./images/mobile/examples/webp/example4_mb_450@1x.webp 1x,
+                                ./images/mobile/examples/webp/example4_mb_450@2x.webp 2x" />
+                    
+                        <source media="(max-width: 767px)" type="image/jpg"
+                            srcset="
+                                ./images/mobile/examples/example4_mb_450@1x.jpg 1x,
+                                ./images/mobile/examples/example4_mb_450@2x.jpg 2x" />
+                    
+                        <img class="example__img" src="./images/desktop/examples/example4_ds_370@1x.jpg" alt="Наушники Prime" /> 
+                    </picture>
                     <div class="example__overlay">
                         <p class="example__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют
                             эту платформу для цифрового
@@ -136,7 +271,37 @@
         <li class="portfolio-item">
                 <a href="#" class="example">
                     <div class="example__thumb-box">
-                    <img class="example__img" src="./images/boxes.jpg" alt="project Boxes">
+                    <picture>
+                        <source media="(min-width: 1200px)" type="image/webp" srcset="
+                                        ./images/desktop/examples/webp/example5_ds_370@1x.webp 1x,
+                                        ./images/desktop/examples/webp/example5_ds_370@2x.webp 2x" />
+                    
+                        <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                                        ./images/desktop/examples/example5_ds_370@1x.jpg 1x,
+                                        ./images/desktop/examples/example5_ds_370@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" srcset="
+                                        ./images/tablet/examples/webp/example5_tb_354@1x.webp 1x,
+                                        ./images/tablet/examples/webp/example5_tb_354@2x.webp 2x" />
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/jpg" srcset="
+                                        ./images/tablet/examples/example5_tb_354@1x.jpg 1x,
+                                        ./images/tablet/examples/example5_tb_354@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(max-width: 767px)" type="image/webp" srcset="
+                                        ./images/mobile/examples/webp/example5_mb_450@1x.webp 1x,
+                                        ./images/mobile/examples/webp/example5_mb_450@2x.webp 2x" />
+                    
+                        <source media="(max-width: 767px)" type="image/jpg" srcset="
+                                        ./images/mobile/examples/example5_mb_450@1x.jpg 1x,
+                                        ./images/mobile/examples/example5_mb_450@2x.jpg 2x" />
+                    
+                        <img class="example__img" src="./images/desktop/examples/example5_ds_370@1x.jpg" alt="Проект Boxes" />
+                    </picture>
                         <div class="example__overlay">
                             <p class="example__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют
                                 эту платформу для цифрового
@@ -152,7 +317,37 @@
         <li class="portfolio-item">
             <a href="#" class="example">
                 <div class="example__thumb-box">
-                    <img class="example__img" src="./images/inspiration.jpg" alt="project Inspiration">
+                    <picture>
+                        <source media="(min-width: 1200px)" type="image/webp" srcset="
+                                        ./images/desktop/examples/webp/example6_ds_370@1x.webp 1x,
+                                        ./images/desktop/examples/webp/example6_ds_370@2x.webp 2x" />
+                    
+                        <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                                        ./images/desktop/examples/example6_ds_370@1x.jpg 1x,
+                                        ./images/desktop/examples/example6_ds_370@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" srcset="
+                                        ./images/tablet/examples/webp/example6_tb_354@1x.webp 1x,
+                                        ./images/tablet/examples/webp/example6_tb_354@2x.webp 2x" />
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/jpg" srcset="
+                                        ./images/tablet/examples/example6_tb_354@1x.jpg 1x,
+                                        ./images/tablet/examples/example6_tb_354@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(max-width: 767px)" type="image/webp" srcset="
+                                        ./images/mobile/examples/webp/example6_mb_450@1x.webp 1x,
+                                        ./images/mobile/examples/webp/example6_mb_450@2x.webp 2x" />
+                    
+                        <source media="(max-width: 767px)" type="image/jpg" srcset="
+                                        ./images/mobile/examples/example6_mb_450@1x.jpg 1x,
+                                        ./images/mobile/examples/example6_mb_450@2x.jpg 2x" />
+                    
+                        <img class="example__img" src="./images/desktop/examples/example6_ds_370@1x.jpg" alt="Проект Inspiration" />
+                    </picture>
                     <div class="example__overlay">
                         <p class="example__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют
                             эту платформу для цифрового
@@ -168,7 +363,37 @@
         <li class="portfolio-item">
                 <a href="#" class="example">
                     <div class="example__thumb-box">
-                        <img class="example__img" src="./images/limitedit.jpg" alt="project Limited Edition">
+                        <picture>
+                            <source media="(min-width: 1200px)" type="image/webp" srcset="
+                                            ./images/desktop/examples/webp/example7_ds_370@1x.webp 1x,
+                                            ./images/desktop/examples/webp/example7_ds_370@2x.webp 2x" />
+                        
+                            <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                                            ./images/desktop/examples/example7_ds_370@1x.jpg 1x,
+                                            ./images/desktop/examples/example7_ds_370@2x.jpg 2x" />
+                        
+                        
+                        
+                            <source media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" srcset="
+                                            ./images/tablet/examples/webp/example7_tb_354@1x.webp 1x,
+                                            ./images/tablet/examples/webp/example7_tb_354@2x.webp 2x" />
+                        
+                            <source media="(min-width: 768px) and (max-width: 1199px)" type="image/jpg" srcset="
+                                            ./images/tablet/examples/example7_tb_354@1x.jpg 1x,
+                                            ./images/tablet/examples/example7_tb_354@2x.jpg 2x" />
+                        
+                        
+                        
+                            <source media="(max-width: 767px)" type="image/webp" srcset="
+                                            ./images/mobile/examples/webp/example7_mb_450@1x.webp 1x,
+                                            ./images/mobile/examples/webp/example7_mb_450@2x.webp 2x" />
+                        
+                            <source media="(max-width: 767px)" type="image/jpg" srcset="
+                                            ./images/mobile/examples/example7_mb_450@1x.jpg 1x,
+                                            ./images/mobile/examples/example7_mb_450@2x.jpg 2x" />
+                        
+                            <img class="example__img" src="./images/desktop/examples/example7_ds_370@1x.jpg" alt="Издание Limited Edition" />
+                        </picture>
                         <div class="example__overlay">
                             <p class="example__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют
                                 эту платформу для цифрового
@@ -184,7 +409,37 @@
         <li class="portfolio-item">
             <a href="#" class="example">
                 <div class="example__thumb-box">
-                    <img class="example__img" src="./images/lab.jpg" alt="our marketing">
+                    <picture>
+                        <source media="(min-width: 1200px)" type="image/webp" srcset="
+                                        ./images/desktop/examples/webp/example8_ds_370@1x.webp 1x,
+                                        ./images/desktop/examples/webp/example8_ds_370@2x.webp 2x" />
+                    
+                        <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                                        ./images/desktop/examples/example8_ds_370@1x.jpg 1x,
+                                        ./images/desktop/examples/example8_ds_370@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" srcset="
+                                        ./images/tablet/examples/webp/example8_tb_354@1x.webp 1x,
+                                        ./images/tablet/examples/webp/example8_tb_354@2x.webp 2x" />
+                    
+                        <source media="(min-width: 768px) and (max-width: 1199px)" type="image/jpg" srcset="
+                                        ./images/tablet/examples/example8_tb_354@1x.jpg 1x,
+                                        ./images/tablet/examples/example8_tb_354@2x.jpg 2x" />
+                    
+                    
+                    
+                        <source media="(max-width: 767px)" type="image/webp" srcset="
+                                        ./images/mobile/examples/webp/example8_mb_450@1x.webp 1x,
+                                        ./images/mobile/examples/webp/example8_mb_450@2x.webp 2x" />
+                    
+                        <source media="(max-width: 767px)" type="image/jpg" srcset="
+                                        ./images/mobile/examples/example8_mb_450@1x.jpg 1x,
+                                        ./images/mobile/examples/example8_mb_450@2x.jpg 2x" />
+                    
+                        <img class="example__img" src="./images/desktop/examples/example8_ds_370@1x.jpg" alt="Проект LAB"/>
+                    </picture>
                     <div class="example__overlay">
                         <p class="example__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют
                             эту платформу для цифрового
@@ -200,7 +455,38 @@
         <li class="portfolio-item">
             <a href="#" class="example">
                 <div class="example__thumb-box">
-                <img class="example__img" src="./images/groving.jpg" alt="Growing Business">
+                <!-- <img class="example__img" src="./images/groving.jpg" alt="Growing Business"> -->
+                <picture>
+                    <source media="(min-width: 1200px)" type="image/webp" srcset="
+                                    ./images/desktop/examples/webp/example9_ds_370@1x.webp 1x,
+                                    ./images/desktop/examples/webp/example9_ds_370@2x.webp 2x" />
+                
+                    <source media="(min-width: 1200px)" type="image/jpg" srcset="
+                                    ./images/desktop/examples/example8_ds9370@1x.jpg 1x,
+                                    ./images/desktop/examples/example8_ds9370@2x.jpg 2x" />
+                
+                
+                
+                    <source media="(min-width: 768px) and (max-width: 1199px)" type="image/webp" srcset="
+                                    ./images/tablet/examples/webp/example9_tb_354@1x.webp 1x,
+                                    ./images/tablet/examples/webp/example9_tb_354@2x.webp 2x" />
+                
+                    <source media="(min-width: 768px) and (max-width: 1199px)" type="image/jpg" srcset="
+                                    ./images/tablet/examples/example8_tb_954@1x.jpg 1x,
+                                    ./images/tablet/examples/example8_tb_954@2x.jpg 2x" />
+                
+                
+                
+                    <source media="(max-width: 767px)" type="image/webp" srcset="
+                                    ./images/mobile/examples/webp/example9_mb_450@1x.webp 1x,
+                                    ./images/mobile/examples/webp/example9_mb_450@2x.webp 2x" />
+                
+                    <source media="(max-width: 767px)" type="image/jpg" srcset="
+                                    ./images/mobile/examples/example8_mb_950@1x.jpg 1x,
+                                    ./images/mobile/examples/example8_mb_950@2x.jpg 2x" />
+                
+                    <img class="example__img" src="./images/desktop/examples/example9_ds_370@1x.jpg" alt="Growing Business" />
+                </picture>
                     <div class="example__overlay">
                         <p class="example__overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют
                             эту платформу для цифрового

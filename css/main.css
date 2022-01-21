@@ -18,6 +18,10 @@ body a {
   text-decoration: none;
 }
 
+.body.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
 }
@@ -60,6 +64,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
+  outline: 1px solid red;
 }
 @media screen and (min-width: 1200px) {
   .container {
@@ -306,6 +311,7 @@ section {
   width: 40px;
   height: 40px;
   padding: 0px 0px;
+  z-index: 50;
 }
 @media screen and (min-width: 768px) {
   .burger__button {
@@ -1493,6 +1499,10 @@ section {
   background-color: #188ce8;
 }
 
+.portfolio {
+  padding: 60px 0;
+}
+
 .portfolio-filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1506,9 +1516,16 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: -15px;
 }
-.portfolio-filter__item:not(:last-child) {
+.portfolio-filter__item {
   margin-right: 8px;
+  margin-bottom: 15px;
+}
+.portfolio-filter__item:last-child {
+  margin-right: 0;
 }
 .portfolio-filter__button {
   font-family: inherit;
