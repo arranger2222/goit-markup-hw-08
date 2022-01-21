@@ -9,8 +9,11 @@
   backdrop-filter: blur(10px);
   margin-left: -15px;
   padding: 48px 40px;
+  transform: scale(0.8);
   &.is-opened {
     display: flex;
+    transform: scale(1);
+    transition: 500ms;
   }
 }
 
@@ -21,6 +24,7 @@
     text-transform: capitalize;
     font-weight: 500;
     color: $primary-text-color;
+    transition: color $main-transition;
   }
   &__link--active {
     color: $secondary-color;
@@ -48,6 +52,9 @@
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: $secondary-color;
+  @media screen and (max-width: 374px) {
+    font-size: 22px;
+  }
 }
 .mobile-contacts__link--mail {
   font-size: 24px;

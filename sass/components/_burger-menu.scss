@@ -19,13 +19,14 @@
   }
   &:hover .icon-menu {
     fill: $secondary-color;
+    transition: fill $main-transition;
   }
   &:hover .icon-cross {
     fill: $secondary-color;
+    transition: fill $main-transition;
   }
 }
 .icon-cross,
 .icon-menu {
   fill: $primary-text-color;
-  transition: $main-transition;
 }
