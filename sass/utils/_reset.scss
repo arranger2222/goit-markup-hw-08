@@ -10,16 +10,16 @@ body {
   color: $primary-text-color;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 body li {
   list-style-type: none;
 }
 
 body a {
   text-decoration: none;
-}
-
-.body.modal-open {
-  overflow: hidden;
 }
 
 img {

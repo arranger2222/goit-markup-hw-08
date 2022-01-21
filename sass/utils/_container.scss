@@ -2,7 +2,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
-  outline: 1px solid red;
+  // outline: 1px solid red;
 
   @include respond-to(desktop) {
     width: 1200px;
