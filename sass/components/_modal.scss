@@ -27,7 +27,7 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: calc(100% - 20px);
-  height: 610px;
+  height: calc(100% - 20px);
 
   background-color: #fff;
   transition: $main-transition;
@@ -77,7 +77,7 @@
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
     fill: #000;
-    transition: fill $main-transition;
+    transition: transform $main-transition;
   }
 
   &__icon {
@@ -89,5 +89,7 @@
 
   &:hover {
     fill: $secondary-color;
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
   }
 }
