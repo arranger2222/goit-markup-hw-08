@@ -10,6 +10,8 @@
   }
   & .icon-cross {
     display: none;
+    transition: transform $main-transition;
+    transform-origin: 50% 50%;
   }
   &.is-opened .icon-cross {
     display: block;
@@ -17,13 +19,16 @@
   &.is-opened .icon-menu {
     display: none;
   }
+
   &:hover .icon-menu {
     fill: $secondary-color;
     transition: fill $main-transition;
   }
+
   &:hover .icon-cross {
     fill: $secondary-color;
-    transition: fill $main-transition;
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
   }
 }
 .icon-cross,

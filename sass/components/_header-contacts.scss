@@ -17,7 +17,7 @@
     align-items: center;
     color: $secondary-text-color;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.02em;
     line-height: 1.14em;
     position: relative;
@@ -25,6 +25,7 @@
     transition: color $main-transition;
 
     @include respond-to(desktop) {
+      font-size: 14px;
       padding: 32px 0;
     }
   }
@@ -41,8 +42,28 @@
 
   &__icon {
     fill: $secondary-text-color;
-    margin-right: 10px;
+    margin-right: 8px;
     transition: $main-transition;
+    @include respond-to(desktop) {
+      margin-right: 10px;
+    }
+  }
+
+  &__icon--smartphone {
+    width: 10px;
+    height: 14px;
+    @include respond-to(desktop) {
+      width: 10px;
+      height: 16px;
+    }
+  }
+  &__icon--envelope {
+    width: 14px;
+    height: 10px;
+    @include respond-to(desktop) {
+      width: 16px;
+      height: 12px;
+    }
   }
 
   &__link:hover svg,
