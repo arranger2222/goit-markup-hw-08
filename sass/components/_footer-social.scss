@@ -47,6 +47,7 @@
     height: 44px;
     border-radius: 50%;
     transition: background-color $main-transition;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
 
   &__item:not(:last-child) {

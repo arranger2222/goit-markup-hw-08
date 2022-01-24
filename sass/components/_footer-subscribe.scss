@@ -50,11 +50,18 @@
     border: 1px solid $secondary-color;
   }
 
+  &__input:hover::placeholder {
+    transform: translate(2px);
+    transition: transform $main-transition;
+  }
+
   &__input::placeholder {
     color: rgba(255, 255, 255, 0.6);
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
+    transform: translate(0px);
+    transition: transform $main-transition;
   }
 
   &__button {
