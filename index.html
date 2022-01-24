@@ -20,11 +20,48 @@
     <header class="header">
 <!-- =================== НАВИГАЦИЯ ============================= -->
     <div class="header__container">
+        <div class="mobile-menu" data-menu-container>
+            <ul class="mobile-nav">
+                <li class="mobile-nav__item">
+                    <a href="./index.html" class="mobile-nav__link mobile-nav__link--active">студия</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="./portfolio.html" class="mobile-nav__link">портфолио</a>
+                </li>
+                <li class="mobile-nav__item">
+                    <a href="#" class="mobile-nav__link">контакты</a>
+                </li>
+            </ul>
+            <ul class="mobile-contacts">
+                <li class="mobile-contacts__item">
+                    <a href="tel:+380991111111" class="mobile-contacts__link mobile-contacts__link--phone">
+                        +38 096 111 11 11
+                    </a>
+                </li>
+                <li class="mobile-contacts__item">
+                    <a href="mailto:info@example.com" class="mobile-contacts__link mobile-contacts__link--mail">
+                        info@devstudio.com
+                    </a>
+                </li>
+            </ul>
+            <ul class="mobile-social">
+                <li class="mobile-social__item"> <a href="#" class="mobile-social__link">instagram</a> </li>
+                <li class="mobile-social__item"> <a href="#" class="mobile-social__link">twitter</a> </li>
+                <li class="mobile-social__item"> <a href="#" class="mobile-social__link">facebook</a> </li>
+                <li class="mobile-social__item"> <a href="#" class="mobile-social__link">linkedin</a> </li>
+            </ul>
+        </div>  
         <div class="container">
             <nav class="nav">
                 <a href="index.html" class="logo">
                     <span class="logo__web">Web</span>Studio
                 </a>
+                <button class="burger__button" type="button" data-burger-btn>
+                    <svg class="burger-icon" width="40px" height="40px" aria-label="переключатель мобильного меню">
+                        <use class="icon-cross" href="images/sprite.svg#burger-cross"></use>
+                        <use class="icon-menu" href="images/sprite.svg#burger-menu"></use>
+                    </svg>
+                </button>          
                 <ul class="nav-menu">
                     <li class="nav-menu__item"><a href="index.html" class="nav-menu__link nav-menu__link--active">Студия</a></li>
                     <li class="nav-menu__item"><a href="portfolio.html" class="nav-menu__link">Портфолио</a></li>
@@ -47,48 +84,11 @@
                             +38 096 111 11 11</a>
                     </li>
                 </ul>
-                <div class="mobile-menu" data-menu-container>
-                    <ul class="mobile-nav">
-                        <li class="mobile-nav__item">
-                            <a href="./index.html" class="mobile-nav__link mobile-nav__link--active">студия</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a href="./portfolio.html" class="mobile-nav__link">портфолио</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a href="#" class="mobile-nav__link">контакты</a>
-                        </li>
-                    </ul>
-                    <ul class="mobile-contacts">
-                        <li class="mobile-contacts__item">
-                            <a href="tel:+380991111111" class="mobile-contacts__link mobile-contacts__link--phone">
-                                +38 096 111 11 11
-                            </a>
-                        </li>
-                        <li class="mobile-contacts__item">
-                            <a href="mailto:info@example.com" class="mobile-contacts__link mobile-contacts__link--mail">
-                                info@devstudio.com
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="mobile-social">
-                        <li class="mobile-social__item"> <a href="#" class="mobile-social__link">instagram</a> </li>
-                        <li class="mobile-social__item"> <a href="#" class="mobile-social__link">twitter</a> </li>
-                        <li class="mobile-social__item"> <a href="#" class="mobile-social__link">facebook</a> </li>
-                        <li class="mobile-social__item"> <a href="#" class="mobile-social__link">linkedin</a> </li>
-                    </ul>
-                </div>  
             </nav>
         </div>
+    </div>             
             <!-- ====================== ПОЧТА И ТЕЛЕФОН ======================== -->
             
-            <button class="burger__button" type="button" data-burger-btn>
-                <svg class="burger-icon" width="40px" height="40px" aria-label="переключатель мобильного меню">
-                    <use class="icon-cross" href="images/sprite.svg#burger-cross"></use>
-                    <use class="icon-menu" href="images/sprite.svg#burger-menu"></use>
-                </svg>
-            </button>          
-        </div>             
     </header>
     <main>
 
